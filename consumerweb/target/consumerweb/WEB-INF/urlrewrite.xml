@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.1//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.1.dtd">
+<urlrewrite>
+
+<rule>
+		<from>^/$</from>
+		<to last="true">/account/login.html</to>
+	</rule>
+	<!-- 此优先级是最低的,直接转发 -->
+	<rule>
+		<from>/([a-zA-Z]+).html</from>
+		<to last="true">/$1</to>
+	</rule>
+
+</urlrewrite>
